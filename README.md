@@ -1,9 +1,25 @@
+# 后端面试题
+
+引入了一个工具 `node-typescript-boilerplate`, 是我的基础框架，提供了编译ts和语法检查。
+
+思路图：
+1. 获取页面内容。页面有可能是异步渲染，这样获得数据更容易。
+2. 使用html parse解析，或者正则解析http代理数据信息
+3. 异步检查代理健康情况
+4. 循环第一步
+
+ps：
+1. 如果请求被识别为爬虫，可以放慢查询速度、从浏览器拿出http头信息和cookie，拼在自己请求上
+2. 具体的代码还没开始
+
+---
+
 [![Dev dependencies][dependencies-badge]][dependencies]
 [![Node.js version][nodejs-badge]][nodejs]
 [![NPM version][npm-badge]][npm]
 [![Build Status][travis-badge]][travis-ci]
 
-[![APLv2][license-badge]][LICENSE]
+[![APLv2][license-badge]][license]
 [![PRs Welcome][prs-badge]][prs]
 [![Donate][donate-badge]][donate]
 
@@ -17,13 +33,13 @@ Minimalistic boilerplate to jump-start a [Node.js][nodejs] project in [TypeScrip
 
 Provides a basic template, "batteries included":
 
-+ [TypeScript][typescript] [2.8][typescript-28] to ES6 transpilation,
-+ [TSLint][tslint] 5.x with [Microsoft recommended rules][tslint-microsoft-contrib],
-+ [Jest][jest] unit testing and code coverage,
-+ Type definitions for Node.js v8.x and Jest,
-+ [NPM scripts for common operations](#available-scripts),
-+ a simple example of TypeScript code and unit test,
-+ .editorconfig for consistent file format.
+* [TypeScript][typescript] [2.8][typescript-28] to ES6 transpilation,
+* [TSLint][tslint] 5.x with [Microsoft recommended rules][tslint-microsoft-contrib],
+* [Jest][jest] unit testing and code coverage,
+* Type definitions for Node.js v8.x and Jest,
+* [NPM scripts for common operations](#available-scripts),
+* a simple example of TypeScript code and unit test,
+* .editorconfig for consistent file format.
 
 ## Quick start
 
@@ -52,18 +68,19 @@ This is **optional**, but if you want to learn how to write JavaScript tests for
 
 ## Available scripts
 
-+ `clean` - remove coverage data, Jest cache and transpiled files,
-+ `build` - transpile TypeScript to ES6,
-+ `watch` - interactive watch mode to automatically transpile source files, 
-+ `lint` - lint source files and tests,
-+ `test` - run tests,
-+ `test:watch` - interactive watch mode to automatically re-run tests
+* `clean` - remove coverage data, Jest cache and transpiled files,
+* `build` - transpile TypeScript to ES6,
+* `watch` - interactive watch mode to automatically transpile source files,
+* `lint` - lint source files and tests,
+* `test` - run tests,
+* `test:watch` - interactive watch mode to automatically re-run tests
 
 ## Alternative
 
 As an alternative to TypeScript, you can try my [Node.js Flow boilerplate][flow-boilerplate]. It's basically the same but with ES6, async/await, Flow type checking and ESLint.
 
 ## License
+
 Licensed under the APLv2. See the [LICENSE](https://github.com/jsynowiec/node-typescript-boilerplate/blob/master/LICENSE) file for details.
 
 [dependencies-badge]: https://david-dm.org/jsynowiec/node-typescript-boilerplate/dev-status.svg

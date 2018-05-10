@@ -1,25 +1,51 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
     "allowJs": true,
-    "importHelpers": true,
-    "jsx": "react",
-    "alwaysStrict": true,
+    // "checkJs": true,
+    "module": "es2015",
+    "target": "es2015",
+    "moduleResolution": "node",
+    "declaration": false,
     "sourceMap": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
+    "inlineSourceMap": false,
+    "inlineSources": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "noEmitHelpers": true,
+    "noEmitOnError": false,
+    // "noUnusedParameters": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitAny": false,
-    "noImplicitThis": false,
-    "strictNullChecks": false
+    // Enable all strict type checking options
+    "strict": true,
+    "outDir": "dist",
+    // "typeRoots": [
+    //   "./node_modules/@types"
+    // ],
+    "skipLibCheck": true,
+    "lib": ["dom", "es2015", "es2017.object", "esnext.asynciterable"],
+    "types": [
+    ]
   },
+  // "files": [
+  //   "src/index.ts"
+  // ],
   "include": [
-    "src/**/*",
-    "__tests__/**/*"
-  ]
+    // "node_modules/grpc-tsd/src/grpc.d.ts",
+    "src/types/*.d.ts"
+  ],
+  "exclude": [
+    // "node_modules",
+    "./node_modules/\\.**",
+    "**/*.spec.ts"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useWebpackText": true
+  },
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  }
 }
